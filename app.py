@@ -4,7 +4,6 @@
 # =====================================================
 
 import pandas as pd
-import sqlite3
 import streamlit as st
 import plotly.express as px
 
