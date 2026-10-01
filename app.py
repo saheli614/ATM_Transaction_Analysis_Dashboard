@@ -164,3 +164,12 @@ else:
     st.markdown("---")
     with st.expander("🔎 View Raw Transaction Data"):
         st.dataframe(filtered_df, use_container_width=True)
+
+!streamlit run app.py &>/content/logs.txt &
+!sleep 5
+!cat /content/logs.txt
+
+from pyngrok import ngrok
+ngrok.set_auth_token('3I74cf9rWMvW86aSSqIgtFYn5Og_7sqyRBEoYEs57dsQXgwhS')
+public_url = ngrok.connect(8501)
+print("Dashboard URL:", public_url)
